@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="w3.css"/>
+</head>
+<body>
+    <div class="w3-row w3-container">
+        <div class="w3-col" style="width:70%">
+            <div class="w3-content w3-section" style="max-width:500px">
+                <p>The w3-animate-fading class animates an element in and out (takes about 10 seconds).</p>
+              
+                <img class="mySlides w3-animate-fading" src="bruno.PNG" style="width:100%">
+                <img class="mySlides w3-animate-fading" src="rubic.PNG" style="width:100%">
+                <img class="mySlides w3-animate-fading" src="bruno.PNG" style="width:100%">
+                <img class="mySlides w3-animate-fading" src="rubix.PNG" style="width:100%">
+              </div>
+        </div>
+    <div class="w3-col w3-card-4" style="width:30%">
+    <p>example of a card</p>
+    </div>
+    </div>
+    <p>End of my program</p>
+   
+      
+      <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 9000);    
+      }
+      </script>
+      
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css"/>
+    <title> Simple Calculator App</title>
+</head>
+<body>
+    <p>SImple calculator Project using html and w3.css</p>
+    <div class="w3-container w3-display-middle w3-border-hover w3-grey">
+        <div class="display w3-padding-16">
+            <input type="text" class="w3-input w3-right-align" id="screen" placeholder="0"/>
+        </div>
+        <div class="w3-row-padding w3-section">
+            <button class="w3-button w3-col s3 w3-padding-16" onclick="screen.value=''">C</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">/</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">X</button>
+            <button class="w3-padding-16 w3-button w3-col s3"  onclick="backspc()">DEL</button>
+        </div>
+        <div class="w3-row-padding w3-section">
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">7</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">8</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">9</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">-</button>
+        </div>
+        <div class="w3-row-padding w3-section">
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">4</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">5</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">6</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">+</button>
+        </div>
+        <div class="w3-row-padding w3-section">
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">1</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">2</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">3</button>
+            <button class="w3-btn w3-col s3 w3-padding-16" id="btn">%</button>
+        </div>
+        <div class="w3-row-padding w3-section">
+            <button class="w3-btn  w3-quarter w3-padding-16" id="btn">.</button>
+            <button class="w3-btn  w3-quarter w3-padding-16" id="btn">0</button>
+            <button class="w3-button w3-green w3-half w3-padding-16"  onclick="screen.value=eval(screen.value)"  >=</button>
+        </div>
+    </div>
+</body>
+<script>
+    var screen= document.querySelector("#screen");
+    var btn= document.querySelectorAll('#btn');
+    for (item of btn){
+        item.addEventListener('click',(e)=>{
+            btntext= e.target.innerText;
+            if (btntext=="X"){
+                btntext="*";
+            }
+            screen.value+= btntext;
+        });
+    }
+    function backspc(){
+        screen.value =screen.value.substr(0,screen.value.length-1);
+    }
+</script>
+</html>

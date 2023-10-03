@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w3.css">
+    <title>QuizApp</title>
+</head>
+<body class="w3-grey">
+    <div class="quiz-container w3-card-4 w3-white w3-display-middle" id="quiz">
+        <div class="header">
+            <h2 class="questions">Answer the questions below.</h2>
+        <ul class="w3-ul w3-hoverable">
+            <li>
+                <input type="radio" class="w3-radio answer" name="answer" id="a" checked>
+                <label for="a" id="a_text">Answer</label>
+            </li>
+            <li>
+                <input type="radio" class="w3-radio answer" name="answer" id="b">
+                <label for="b" id="b_text">Answer</label>
+            </li>
+            <li>
+                <input type="radio" class="w3-radio answer" name="answer" id="c">
+                <label for="c" id="c_text">Answer</label>
+            </li>
+            <li>
+                <input type="radio" class="w3-radio answer" name="answer" id="d">
+                <label for="d" id="d_text">Answer</label>
+            </li>
+        </ul>
+    </div>
+        <button type="submit" class="w3-btn w3-block w3-green " id="submit">Submit</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
